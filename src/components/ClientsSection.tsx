@@ -1,4 +1,9 @@
 import React from 'react';
+import saEducation from '../assets/images_(9).png';
+import shopify from '../assets/images_(7).png';
+import ria from '../assets/images_(8).png';
+import masdar from '../assets/GiIlvS3I_400x400.png';
+import indrive from '../assets/Indrive-Logo-PNG-SVG-Vector.png';
 
 const ClientsSection = () => {
   const stats = [
@@ -8,12 +13,11 @@ const ClientsSection = () => {
   ];
 
   const logos = [
-    { id: 1, name: 'Brand 1' },
-    { id: 2, name: 'Brand 2' },
-    { id: 3, name: 'Brand 3' },
-    { id: 4, name: 'Brand 4' },
-    { id: 5, name: 'Brand 5' },
-    { id: 6, name: 'Brand 6' },
+    { id: 1, name: 'SA Education Consultant', src: saEducation },
+    { id: 2, name: 'Shopify', src: shopify },
+    { id: 3, name: 'Ria Money Transfer', src: ria },
+    { id: 4, name: 'Masdar Free Zone', src: masdar },
+    { id: 5, name: 'inDrive', src: indrive },
   ];
 
   return (
@@ -34,11 +38,13 @@ const ClientsSection = () => {
                 {[...logos, ...logos].map((logo, index) => (
                   <div
                     key={`top-${index}`}
-                    className="flex-shrink-0 w-32 h-24 rounded-lg bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center hover:border-white/20 hover:from-white/15 hover:to-white/10 transition-all duration-300 cursor-pointer"
+                    className="flex-shrink-0 w-32 h-24 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:border-white/20 hover:bg-white/10 transition-all duration-300 cursor-pointer p-3"
                   >
-                    <div className="text-center text-white/70 text-sm font-medium">
-                      {logo.name}
-                    </div>
+                    <img
+                      src={logo.src}
+                      alt={logo.name}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                 ))}
               </div>
@@ -50,11 +56,13 @@ const ClientsSection = () => {
                 {[...logos, ...logos].map((logo, index) => (
                   <div
                     key={`bottom-${index}`}
-                    className="flex-shrink-0 w-32 h-24 rounded-lg bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center hover:border-white/20 hover:from-white/15 hover:to-white/10 transition-all duration-300 cursor-pointer"
+                    className="flex-shrink-0 w-32 h-24 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:border-white/20 hover:bg-white/10 transition-all duration-300 cursor-pointer p-3"
                   >
-                    <div className="text-center text-white/70 text-sm font-medium">
-                      {logo.name}
-                    </div>
+                    <img
+                      src={logo.src}
+                      alt={logo.name}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                 ))}
               </div>
