@@ -4,6 +4,10 @@ import shopify from '../assets/images_(7).png';
 import ria from '../assets/images_(8).png';
 import masdar from '../assets/GiIlvS3I_400x400.png';
 import indrive from '../assets/Indrive-Logo-PNG-SVG-Vector.png';
+import logo4 from '../assets/images_(4).png';
+import logo5 from '../assets/images_(5).png';
+import logo6 from '../assets/images_(6).png';
+import logo34 from '../assets/images_(34).jpeg';
 
 const ClientsSection = () => {
   const stats = [
@@ -18,6 +22,10 @@ const ClientsSection = () => {
     { id: 3, name: 'Ria Money Transfer', src: ria },
     { id: 4, name: 'Masdar Free Zone', src: masdar },
     { id: 5, name: 'inDrive', src: indrive },
+    { id: 6, name: 'Brand Logo 4', src: logo4 },
+    { id: 7, name: 'Brand Logo 5', src: logo5 },
+    { id: 8, name: 'Brand Logo 6', src: logo6 },
+    { id: 9, name: 'Brand Logo 34', src: logo34 },
   ];
 
   return (
@@ -35,9 +43,9 @@ const ClientsSection = () => {
             {/* Top Row - Right to Left */}
             <div className="w-full overflow-hidden">
               <div className="flex gap-8 animate-marquee-rtl">
-                {[...logos, ...logos].map((logo, index) => (
+                {logos.map((logo) => (
                   <div
-                    key={`top-${index}`}
+                    key={`top-${logo.id}`}
                     className="flex-shrink-0 w-32 h-24 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:border-white/20 hover:bg-white/10 transition-all duration-300 cursor-pointer p-3"
                   >
                     <img
@@ -53,9 +61,9 @@ const ClientsSection = () => {
             {/* Bottom Row - Left to Right */}
             <div className="w-full overflow-hidden">
               <div className="flex gap-8 animate-marquee-ltr">
-                {[...logos, ...logos].map((logo, index) => (
+                {logos.map((logo) => (
                   <div
-                    key={`bottom-${index}`}
+                    key={`bottom-${logo.id}`}
                     className="flex-shrink-0 w-32 h-24 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:border-white/20 hover:bg-white/10 transition-all duration-300 cursor-pointer p-3"
                   >
                     <img
